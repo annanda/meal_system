@@ -1,0 +1,19 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans 'Meal' %}</title>
+</head>
+<body>
+    <h1>{% trans 'Meal' %}</h1>
+    <div>
+        <form method="post" action="{% url 'core:create' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="{% trans 'Send' %}">
+        </form>
+    </div>
+</body>
+</html>

@@ -8,3 +8,7 @@ from .models import Meal
 class MealCreateView(CreateView):
     model = Meal
     fields = ['is_good']
+
+
+def daily_report(request):
+    pass

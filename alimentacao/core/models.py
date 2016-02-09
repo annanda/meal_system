@@ -1,6 +1,7 @@
 # coding: utf-8
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse
 
 
 class Meal(models.Model):
@@ -9,3 +10,6 @@ class Meal(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.date, self.is_good)
+
+    def get_absolute_url(self):
+        return reverse('core:create')
