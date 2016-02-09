@@ -1,3 +1,10 @@
+# coding: utf-8
 from django.shortcuts import render
+from django.views.generic import CreateView
 
-# Create your views here.
+from .models import Meal
+
+
+class MealCreateView(CreateView):
+    model = Meal
+    fields = ['is_good']
