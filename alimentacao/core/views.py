@@ -11,4 +11,4 @@ class MealCreateView(CreateView):
 
 
 def daily_report(request):
-    pass
+    return render(request, 'core/daily_report.html', {})

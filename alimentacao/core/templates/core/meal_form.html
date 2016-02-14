@@ -1,12 +1,8 @@
+{% extends 'base.html' %}
 {% load i18n %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% trans 'Meal' %}</title>
-</head>
-<body>
+{% block title %}{% trans 'Mealt' %}{% endblock title %}
+{% block content %}
     <h1>{% trans 'Meal' %}</h1>
     <div>
         <form method="post" action="{% url 'core:create' %}">
@@ -15,5 +11,4 @@
             <input type="submit" value="{% trans 'Send' %}">
         </form>
     </div>
-</body>
-</html>
+{% endblock content %}
