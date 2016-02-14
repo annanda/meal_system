@@ -1,9 +1,9 @@
 # coding: utf-8
 from django.conf.urls import include, url
 
-from . import views
+from .views import MealCreateView, daily_report
 
 urlpatterns = [
-    url(r'^$', views.MealCreateView.as_view(), name='create'),
-    url(r'^daily_report/$', views.daily_report, name='daily_report'),
+    url(r'^$', MealCreateView.as_view(), name='create'),
+    url(r'^daily_report/$', daily_report, name='daily_report'),
 ]

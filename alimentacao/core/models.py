@@ -11,5 +11,5 @@ class Meal(models.Model):
     def __str__(self):
         return '%s - %s' % (self.date, self.is_good)
 
-    def get_absolute_url(self):
-        return reverse('core:create')
+    # def get_absolute_url(self):
+    #     return reverse('core:create')
